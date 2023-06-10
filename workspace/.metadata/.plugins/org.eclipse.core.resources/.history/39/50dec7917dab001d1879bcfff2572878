@@ -1,0 +1,17 @@
+package fileTest;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class FileTest {
+	public static void main(String[] args) {
+		int [] ar = {2,2,7,7,5,5,1,1,6,6};
+		List<Integer> arList = Arrays.stream(ar).boxed().collect(Collectors);
+		int [] ar2 = arList.stream().distinct().mapToInt(i -> i).toArray();
+		Arrays.stream(ar).distinct().map(i -> i+10).sorted().forEach(System.out::println);
+		Arrays.stream(ar).filter(i -> i%2==1).map(i -> i+1).boxed().sorted(Collections.reverseOrder()).map(i -> i+"gi").forEach(System.out::println);
+		
+	}
+}

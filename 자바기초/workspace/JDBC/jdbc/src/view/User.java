@@ -1,0 +1,35 @@
+package view;
+
+import dao.TBL_MEMBER_DAO;
+import vo.TBL_MEMBER_VO;
+
+public class User {
+	public static void main(String[] args) {
+		TBL_MEMBER_DAO dao = new TBL_MEMBER_DAO();
+//	
+		if(dao.login("asd134", "1234")) {
+			System.out.println("login성공");
+		}else {
+			System.out.println("login 실패");
+		}
+		
+//		if(dao.checkId("asd134")) {
+//			System.out.println("사용가능한 아이디");
+//		}else {
+//			System.out.println("사용 불가능");
+//		}
+		TBL_MEMBER_VO vo = new TBL_MEMBER_VO();
+		
+		vo.setId("aj4515");
+		vo.setPw("dadf23");
+		vo.setName("허은상");
+		vo.setAge(24);
+		
+//		dao.join(vo);
+//		if(dao.join(vo)) {
+//			System.out.println("회원가입 성공");
+//		}else {
+//			System.out.println("회원가입 실패");
+//		}
+	}
+}

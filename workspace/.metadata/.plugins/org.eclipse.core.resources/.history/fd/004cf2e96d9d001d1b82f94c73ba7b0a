@@ -1,0 +1,62 @@
+package classTest;
+
+import java.util.Scanner;
+
+class SuperCar {
+	String brand;
+	String color;
+	int price;
+	boolean engine;
+	String result;
+
+	public SuperCar(String brand, String color, int price) {
+		this.brand = brand;
+		this.color = color;
+		this.price = price;
+	}
+	public SuperCar() {
+	}
+	String engineStart() {
+		if(engine==false) {
+			result = brand + "시동을 켰습니다";
+			engine = true;
+		}else {
+			result ="시동이 이미 켜져있습니다";
+		}
+		return result;
+	}
+	
+	String engineStop() {
+		if(engine == true) {
+		result = brand + "시동이 꺼졌습니다";
+		engine = false;
+	}else {
+		result = "시동이 이미 꺼져있습니다";
+	}
+		return result;
+	}
+}
+
+public class ClassTask1 {
+	public static void main(String[] args) {
+		SuperCar mom = new SuperCar("페라리", "파랑색", 68_999);
+		String result = "";
+		int choice = 0;
+		
+		String msg = "1.시동 켜기 \n2.시동 끄기";
+		System.out.println(msg);
+		Scanner sc = new Scanner(System.in);
+		choice = sc.nextInt();
+		
+		switch(choice) {
+		case 1 : result = mom.engineStart();
+			break;
+		case 2 : result = mom.engineStop();
+			break;
+		default : result = "잘못 입력하셨습니다.";
+			break;
+		}
+		System.out.println(result);
+	
+	}
+}

@@ -1,0 +1,21 @@
+package classTest;
+
+class A{
+	int data;
+	void printData() {
+		System.out.println(data);
+	}
+public A(A a, int data) {
+	a.data = data;
+}
+
+}
+
+public class ClassTest {
+	public static void main(String[] args) {
+		A a = new A(a,19);
+		a.data = 10;
+		
+		
+	}
+}

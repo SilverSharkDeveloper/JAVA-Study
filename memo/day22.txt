@@ -1,0 +1,23 @@
+날짜
+Date
+Calendar
+LocalDate
+
+format 바꾸는 방법
+
+
+Writer(출력)
+ 	BufferedWriter :버퍼를 사용한 출력 클래스
+	FileWriter : 전달한 경로의 파일을 출력하기 위한 목적으로 열어준다.
+			전달한 경로에 파이링 없다면 새롭게 만든 후 열어준다.
+	
+Reader(입력)
+	BufferedReader : 버퍼를 사용한 입력 클래스 
+	FileReader : 전달한 경로의 파일을 입력하기 위한 목적으로 열어준다.
+			전달한 경로에 파일이 없으면 FileNotFoundException이 발생한다.
+
+
+File(파일 정보)
+	전달한 경로에 있는 파일의 정보를 담는 타입
+	디렉토리 생성(폴더) 해당 경로의 전체 파일 목록, 파일 삭제 등
+	

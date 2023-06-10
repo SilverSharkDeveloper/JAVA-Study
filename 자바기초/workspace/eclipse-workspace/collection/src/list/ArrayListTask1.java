@@ -1,0 +1,24 @@
+package list;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
+
+public class ArrayListTask1 {
+		public static void main(String[] args) {
+			List <Integer> randomArray = new ArrayList<>();
+			Random r = new Random();
+			
+			for(int i = 0 ; i<5 ; i++) {
+				int a = r.nextInt(20)+1;
+				if(randomArray.contains(Integer.valueOf(a))) {
+					i--; 
+					continue;
+				}
+				randomArray.add(a);
+			}
+			Collections.sort(randomArray);
+			System.out.println(randomArray);
+		}
+}

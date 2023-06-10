@@ -1,0 +1,15 @@
+package objectTest;
+
+public class ToStringTEst {
+	public static void main(String[] args) {
+		ToStringTEst t = new ToStringTEst();
+		System.out.println(t);
+	
+		try {
+			throw new NumberFormatException("안녕~~@");
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		
+	}
+}
